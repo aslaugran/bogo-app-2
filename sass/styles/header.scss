@@ -3,7 +3,7 @@ Header AREA
 ****************************************/
 .header {
   height: 10%;
-  background-color: red;
+  background-color: $white;
   display: flex;
   flex-direction: row;
   flex-flow: nowrap;
