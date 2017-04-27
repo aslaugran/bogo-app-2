@@ -132,16 +132,16 @@ export default class TourDetails extends Component {
           {/*Tour details finish*/}
         </div>
 
-        Sticky footer starts
-        <div class="booking_footer">
-          <div class="booking_back">
+        {/* Sticky footer starts */}
+        <div className="booking_footer">
+          <div className="booking_back">
             <img
               className="btn_img"
               src={process.env.PUBLIC_URL + "/img/Icons/nav_backarrow.svg"}
               alt=""
             />
           </div>
-          <div class="booking_button">
+          <div className="booking_button">
             <a href="#">BOOK NOW</a>
           </div>
         </div>
