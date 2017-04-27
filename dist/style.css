@@ -356,3 +356,51 @@ Tour details
   font-weight: 200;
   font-size: 0.8em;
 }
+
+.booking_footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+}
+
+.booking_back {
+  background-color: #F3F3F3;
+  height: 95px;
+  width: 110px;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.booking_button {
+  background-color: #7DBD6B;
+  height: 95px;
+  width: 495px;
+  float: right;
+}
+
+.booking_button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  font-family: 'Hind', sans-serif;
+  font-size: 2.5em;
+  font-weight: 900;
+  color: #FFF;
+  padding: 0px;
+}

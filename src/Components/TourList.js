@@ -73,7 +73,7 @@ export default class TourList extends Component {
             <div className="image_gradient" />
 
             {/* React componentinn sem sækir ferðirnar */}
-            {/* <div>{toursList}</div> */}
+            <div>{toursList}</div>
 
             <img
               className="tourimg"
