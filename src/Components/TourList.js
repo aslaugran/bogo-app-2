@@ -16,7 +16,7 @@ export default class TourList extends Component {
     const { categoryId } = this.props;
 
     axios
-      .get("http://www.extranet.bogo.is/api/tours/58fcc108ecc2cc0282ccad6e")
+      .get("https://www.extranet.bogo.is/api/tours/58fcc108ecc2cc0282ccad6e")
       .then(response => {
         console.log(response);
         this.setState({ tours: response.data });
@@ -25,11 +25,11 @@ export default class TourList extends Component {
         console.log(error);
       });
 
-    // setTimeout(() => {
-    //   this.setState({
-    //     tours: tours.data
-    //   });
-    // }, 200);
+    setTimeout(() => {
+      this.setState({
+        tours: tours.data
+      });
+    }, 200);
   }
 
   render() {
