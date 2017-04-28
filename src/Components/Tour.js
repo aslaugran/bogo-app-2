@@ -19,7 +19,7 @@ export default class Tour extends Component {
           <div className="card_tour_photo">
             <img
               className=""
-              src={"https://www.extranet.bogo.is/" + mainphoto}
+              src={"http://www.extranet.bogo.is/" + mainphoto}
               alt=""
             />
           </div>
