@@ -6,11 +6,14 @@ export default class TourDetails extends Component {
   }
 
   render() {
-    console.log("data er: ", this.props.data);
-    // var imgUrl = "http://www.extranet.bogo.is/" + this.props.data.mainphoto;
-    // var divImageBg = {
-    //   backgroundImage: "url(" + imgUrl + ")"
-    // };
+    console.log("data er: ", this.props.data.mainphoto);
+    var imgUrl = "http://www.extranet.bogo.is" + this.props.data.mainphoto;
+    console.log("imgUrl er: ", imgUrl);
+    var divImageBg = {
+      backgroundImage: "url('" + imgUrl + "')"
+    };
+
+    console.log("divImageBg er: ", divImageBg);
 
     return (
       <div className="single_tour_container" onClick={() => this.handleClick()}>
@@ -52,7 +55,7 @@ export default class TourDetails extends Component {
               </div>
             </div>
 
-            {/* <div ref="hero_img" className="hero_img" style={divImageBg} /> */}
+            <div ref="hero_img" className="hero_img" style={divImageBg} />
 
           </div>
         </div>
