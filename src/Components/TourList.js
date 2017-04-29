@@ -25,11 +25,11 @@ export default class TourList extends Component {
         console.log(error);
       });
 
-    // setTimeout(() => {
-    //   this.setState({
-    //     tours: tours.data
-    //   });
-    // }, 200);
+    setTimeout(() => {
+      this.setState({
+        tours: tours.data
+      });
+    }, 200);
   }
 
   render() {

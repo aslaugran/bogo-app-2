@@ -54,7 +54,7 @@ export default class TourDetails extends Component {
                 {this.props.data.introtext}
               </div>
             </div>
-            <div className="hero_img" />
+
             <div ref="hero_img" className="hero_img" style={divImageBg} />
 
           </div>
