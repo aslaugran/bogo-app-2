@@ -153,7 +153,7 @@ Cart AREA
 }
 
 .cart_icon {
-  height: 40px;
+  height: 30px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

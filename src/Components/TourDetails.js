@@ -6,7 +6,15 @@ export default class TourDetails extends Component {
   }
 
   render() {
-    console.log("data er: ", this.props.data);
+    console.log("data er: ", this.props.data.mainphoto);
+    var imgUrl = "http://www.extranet.bogo.is" + this.props.data.mainphoto;
+    console.log("imgUrl er: ", imgUrl);
+    var divImageBg = {
+      backgroundImage: "url('" + imgUrl + "')"
+    };
+
+    console.log("divImageBg er: ", divImageBg);
+
     return (
       <div className="single_tour_container" onClick={() => this.handleClick()}>
         {/*Hero container starts*/}
@@ -46,14 +54,9 @@ export default class TourDetails extends Component {
                 {this.props.data.introtext}
               </div>
             </div>
-            <div className="hero_img">
-              <img
-                className="hero_img"
-                // src={process.env.PUBLIC_URL + "/img/Icons/photos.svg"}
-                src={"http://www.extranet.bogo.is/" + this.props.data.mainphoto}
-                alt=""
-              />
-            </div>
+            <div className="hero_img" />
+            <div ref="hero_img" className="hero_img" style={divImageBg} />
+
           </div>
         </div>
         {/*Hero container finish*/}
