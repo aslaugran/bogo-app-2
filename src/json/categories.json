@@ -1,0 +1,33 @@
+{
+  "data": [{
+    "id": 1,
+    "name": "Adventure",
+    "img" : "/img/Categories/AdventureCard2x.png",
+    "color" : "#F6AF47"
+  },{
+    "id": 2,
+    "name": "Blue lagoon",
+    "img" : "/img/Categories/BlueLagoonCard2x.png",
+    "color" : "#9AE1EF"
+  },{
+    "id": 3,
+    "name": "Golden Circle",
+    "img" : "/img/Categories/GoldenCircleCard2x.png",
+    "color" : "#F3D782"
+  },{
+    "id": 4,
+    "name": "Nature",
+    "img" : "/img/Categories/NatureCard2x.png",
+    "color" : "#BEC89A"
+  },{
+    "id": 5,
+    "name": "Northern Lights",
+    "img" : "/img/Categories/NorthernLightsCard2x.png",
+    "color" : "#8BE196"
+  },{
+    "id": 6,
+    "name": "Reykjavik",
+    "img" : "/img/Categories/ReykjavikCard2x.png",
+    "color" : "#9DC1EA"
+  }]
+}

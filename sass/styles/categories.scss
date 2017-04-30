@@ -1,0 +1,35 @@
+.categories_title {
+    padding-top: 35px;
+    padding-left: 15px;
+    padding-bottom: 25px;
+}
+
+.categories_title h1 {
+    font-size: 36px;
+    margin: 0;
+}
+.categories_title h2 {
+    padding-bottom: 25px;
+    margin: 0px;
+}
+
+.categorie_single {
+  height: auto;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  text-align:center;
+  position:relative;
+}
+
+.cat_title {
+  position: absolute;
+  margin: auto;
+   top: 0;
+   left:0;
+   right:0;
+   bottom:0;
+   color:#fff;
+  height:60px;
+  text-transform: uppercase;
+}
