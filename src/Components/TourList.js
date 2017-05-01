@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import Tour from "./Tour";
-import tours from "../json/tours.json";
-import axios from "axios";
 import Slider from "react-slick";
+import Tour from "./Tour";
+import axios from 'axios';
 
 export default class TourList extends Component {
   constructor(props) {
@@ -10,107 +9,70 @@ export default class TourList extends Component {
     this.state = {
       tours: []
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount() {
-    const { categoryId } = this.props;
+  handleClick() {
+    const { id } = this.props.data;
+    this.props.onTourSelected(id)
+  }
 
-    axios
-      .get("http://www.extranet.bogo.is/api/tours/58fcc108ecc2cc0282ccad6e")
-      .then(response => {
-        console.log(response);
-        this.setState({ tours: response.data });
-      })
-      .catch(error => {
-        console.log(error);
-      });
 
+<<<<<<< HEAD
     setTimeout(() => {
       this.setState({
         tours: tours.data
       });
     }, 200);
   }
+=======
+    render() {
+      const { TourSelected } = this.state;
+      const results = this.props.data;
+      let tours = results.map(tour =>
+        <div><Tour
+        photo={tour.mainphoto}
+        key={tour.tourid}
+        id={tour.tourid}
+        name={tour.name}
+        text={tour.introtext}
+        price={tour.priceadult}
+        onTourSelected={id => this.props.onCategorySelected(id)}/></div>
+      );
 
-  render() {
-    const { tours } = this.state;
+>>>>>>> 1c841173dbde68c4dfc6c46733d7f0244d6b2b8b
+
     var settings = {
-      arrows: false,
       centerMode: true,
-      centerPadding: "60px",
+      centerPadding: '120px',
       slidesToShow: 1,
-      centerMode: true,
-      resonsive: [
-        {
-          breakpoint: 1366,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: "80px",
-            slidesToShow: 1
-          }
-        }
-      ]
+      speed: 200,
+      responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '400px',
+        slidesToShow: 1
+      }
+    }
+  ]
     };
 
-    if (tours.length === 0) {
-      return <div>LOADING</div>;
-    }
-    const toursList = tours.map((tour, index) => {
-      return (
-        <Tour
-          data={tour}
-          key={index}
-          onTourSelected={this.props.onTourSelected}
-        />
-      );
-    });
-
-    return (
-      <div className="tours_container container-fluid card-swipe">
-        <Slider {...settings}>
-          <div className="tourcard">
-            <div className="image_gradient" />
-
-            {/* React componentinn sem sækir ferðirnar */}
-            <div>{toursList}</div>
-
-            <img
-              className="tourimg"
-              src="https://bokunprod.imgix.net/2fff3d40-81f7-4307-bed2-2c69e323d7ba.jpg?w=1200"
-              alt=""
-            />
-            <div className="tourdetails">
-              <h3>Take a walk on the ice side</h3>
-              <p>Always a fun day!</p>
-            </div>
-          </div>
-          <div className="tourcard">
-            <div className="image_gradient" />
-            <img
-              className="tourimg"
-              src="https://guidetoiceland.is/image/284561/x/0/golden-circle-and-geothermal-greenhouses-immersive-day-tour-5.jpg"
-              alt=""
-            />
-            <div className="tourdetails">
-              <h3>The Golden Circle</h3>
-              <p>Always a fun day!</p>
-            </div>
-          </div>
-          <div className="tourcard">
-            <div className="image_gradient" />
-            <img
-              className="tourimg"
-              src="http://myvisitsouthiceland.is/wp-content/uploads/2016/08/thorsmork.jpg"
-              alt=""
-            />
-            <div className="tourdetails">
-              <h3>Thorsmork</h3>
-              <p>Always a fun day!</p>
-            </div>
-          </div>
-        </Slider>
-      </div>
-    );
+    return <div style={this.props.background} className="container-fluid card-swipe">
+      <Slider {...settings}>
+        {tours}
+      </Slider>
+      </div>;
   }
 }
