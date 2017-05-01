@@ -1,37 +1,23 @@
 import React, { Component } from "react";
 
-export default class Tour extends Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    console.log("halló");
-    this.props.onTourSelected(this.props.data);
-  }
-  render() {
-    const { mainphoto, name, introtext, priceadult } = this.props.data;
-
-    return (
-      <div className="card_single">
-        <div className="card" onClick={() => this.handleClick()}>
-          <div className="card_tour_photo">
-            <img
-              className=""
-              src={"http://www.extranet.bogo.is/" + mainphoto}
-              alt=""
-            />
+const Tour = props => (
+  <div className="tourcard">
+        <div className="image_gradient"></div>
+    <img className="tourimg" src={"http://extranet.bogo.is" + props.photo} alt=""/>
+    <div className="tourdetails">
+      <div className="row">
+        <div className="col-md-12 col-sm-12 col-xs-12">
+            <h3>{props.name}</h3>
           </div>
-          <div className="card_text_container">
-            <h3 className="card_tour_title">{name}</h3>
-            <div className="sub-txt">
-              <p className="card_subtitle">{introtext}</p>
-              <p className="card_price">{priceadult}</p>
-            </div>
-          </div>
+          <div className="col-md-8 col-sm-8 col-xs-8">
+          <p>{props.text}</p>
+        </div>
+        <div className="col-md-4 col-sm-4 col-xs-4">
+          <p>{props.price} ISK</p>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  </div>
+);
+
+export default Tour;

@@ -1,39 +1,50 @@
+* {
+  min-height: 0;
+  min-width: 0;
+}
+
 .main-content {
    background: #5B5B5B;
+  min-height: 915px;
 }
 
 .tourcard {
-  padding: 60px 0px;
+  padding: 120px 0px;
   margin: auto;
   position: relative;
+  overflow: hidden;
+}
+
+.image_gradient {
+  background: -moz-linear-gradient(bottom, rgba(64,64,64,1) 0%, rgba(41,137,216,0.02) 50%, rgba(201,201,201,0) 51%, rgba(229,229,229,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(bottom, rgba(64,64,64,1) 0%,rgba(41,137,216,0.02) 50%,rgba(201,201,201,0) 51%,rgba(229,229,229,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to top, rgba(64,64,64,1) 0%,rgba(41,137,216,0.02) 50%,rgba(201,201,201,0) 51%,rgba(229,229,229,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#404040', endColorstr='#00e5e5e5',GradientType=0 ); /* IE6-9 */
 }
 
 .tourcard img {
     border-radius: 30px;
-    height: 500px;
+    height: 700px;
     width: 1075px;
     margin: auto;
-    -moz-transition: height 0.3s ease;
-    -webkit-transition: height 0.3s ease;
-    -o-transition: height 0.3s ease;
-    transition: height 0.3s ease;
+    box-shadow: 0px 0px 70px #444;
 }
 
-.slick-slide.slick-active.slick-center.tourcard img {
-  height: 550px;
-  -moz-transition: height 0.3s ease;
-  -webkit-transition: height 0.3s ease;
-  -o-transition: height 0.3s ease;
-  transition: height 0.3s ease;
+.slick-slide.slick-active.slick-center .tourcard {
+  padding: 60px 0px;
 }
 
+.slick-slide.slick-active.slick-center .tourcard img {
+    height: 800px;
+    width: 1075px;
+}
 
-.tourdetails {
+.tourcard  .tourdetails {
     position: absolute;
-    left: 15%;
+    left: 10%;
     width: 100%;
     overflow: hidden;
-    bottom: 90px;
+    bottom: 125px;
     color: #fff;
 }
 

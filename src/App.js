@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-// import logo from './logo.svg';
 import "../dist/style.css";
-import SearchForm from "./Components/Header";
+import AppHeader from "./Components/AppHeader";
 import CategoryList from "./Components/CategoryList";
 import TourList from "./Components/TourList";
 import TourDetails from "./Components/TourDetails";
+import axios from 'axios';
 
 import categories from "./json/categories.json";
 
@@ -13,55 +13,61 @@ export default class App extends Component {
     super(props);
     this.state = {
       categories: [],
+      tours: [],
       selectedCategory: null,
       selectedTour: null
     };
+
     this.handleCategorySelected = this.handleCategorySelected.bind(this);
     this.handleTourSelected = this.handleTourSelected.bind(this);
+
   }
 
   componentDidMount() {
-    // axios.get('http://www.extranet.bogo.is/api/tours/58fcc108ecc2cc0282ccad6e')
-    //   .then(response => {
-    //     this.setState({
-    //       tours: response.data
-    //     });
-    //   })
-    //   .catch(error => {
-    //     console.log('Error fetching and parsing data', error);
-    //   });
     this.setState({
       categories: categories.data
     });
+    axios.get('http://www.extranet.bogo.is/api/tours/58fcc108ecc2cc0282ccad6e')
+      .then(response => {
+        this.setState({
+          tours: response.data
+        });
+      })
+    .catch(error => {
+      console.log('Error fetching and parsing data', error);
+    });
   }
+
+  handleHomeSelected(data) {
+    console.log("Home");
+  }
+
   handleCategorySelected(id) {
-    console.log("handleCategorySelected", id);
     this.setState({
       selectedCategory: id
     });
   }
-  handleTourSelected(data) {
-    console.log("in app.js og  - handleTourSelected", data);
+
+  handleTourSelected(id) {
     this.setState({
       selectedCategory: false
     });
     this.setState({
-      selectedTour: data
+      selectedTour: id
     });
   }
 
   render() {
-    const { categories, selectedCategory, selectedTour } = this.state;
-
+    const { categories, selectedCategory, selectedTour , selectedHome} = this.state;
     let categoryList;
     let tourList;
     let tours;
 
+
     if (selectedCategory) {
       tourList = (
-        <TourList
-          categoryId={selectedCategory}
-          onTourSelected={this.handleTourSelected}
+        <TourList data={this.state.tours}
+          onTourSelected={id => this.state.handleTourSelected(id)}
         />
       );
     } else if (selectedTour) {
@@ -76,12 +82,12 @@ export default class App extends Component {
     }
 
     return (
-      <div className="main-header">
-        <div className="inner">
-          {/* <h1 className="main-title">Whatever Titill</h1> */}
-          <SearchForm />
+      <div>
+        <div className="main-header">
+          <div className="inner">
+            <AppHeader/>
+          </div>
         </div>
-
         <div className="main-content">
           {categoryList}
           {tourList}
