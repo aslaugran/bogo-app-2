@@ -2,15 +2,16 @@ import React from "react";
 import Category from "./Category";
 
 const CategoryList = props => {
-  const categories = props.data.map((category, index) => {
-    return (
+  const results = props.data;
+  let categories = results.map(category =>
       <Category
-        data={category}
-        key={index}
-        onCategorySelected={id => props.onCategorySelected(id)}
+        name={category.name}
+        img={category.img}
+        key={category.id}
+        url={category.name}
+        color={category.color}
       />
-    );
-  });
+);
 
   return (
         <div className="container-fluid">
@@ -18,10 +19,8 @@ const CategoryList = props => {
             <h1>Our Day Tour Categories</h1>
             <h2>Experience Iceland with our trusted guidance</h2>
           </div>
-          <div className="row">
-          <div className="category-holder">
+          <div className="row category-holder">
             {categories}
-          </div>
           </div>
         </div>
   );

@@ -1,7 +1,11 @@
 .categories_title {
     padding-top: 35px;
-    padding-left: 15px;
+    padding-left: 60px;
     padding-bottom: 25px;
+}
+
+.row.category-holder {
+    padding: 0px 35px;
 }
 
 .categories_title h1 {
@@ -14,12 +18,16 @@
 }
 
 .categorie_single {
-  height: auto;
-  width: 100%;
-  margin-bottom: 15px;
+  height: 280px;
+  margin-bottom: 50px;
   border-radius: 10px;
   text-align:center;
   position:relative;
+}
+
+.categorie_single img {
+  box-shadow: 0px 0px 100px #252525;
+  padding: 0px;
 }
 
 .cat_title {

@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+
+// Styles
 import '../dist/grid.css';
+import '../dist/swiper.css';
 import '../dist/style.css';
 
+
+// routes
+import routes from './router';
+
+
+// Render
 ReactDOM.render(
-  <App />,
+  routes,
   document.getElementById('root')
 );

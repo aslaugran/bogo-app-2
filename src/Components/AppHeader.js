@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
+import ReactDOM from "react-dom";
+import { Link } from 'react-router-dom'
 
 export default class AppHeader extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedCategory: null,
-    };
-  }
-
-  handleHomeSelected(data) {
-    console.log("Home");
-  }
-
-  render() {
-    const { selectedHome } = this.state;
+render() {
     return (
+      <div className="main-header">
+        <div className="inner">
       <header>
         <div className="header">
           <div className="logo_area">
-            <img className="logo" src={process.env.PUBLIC_URL + "/img/logo-borg.png"} alt="" onHomeSelected={this.handleHomeSelected}/>
+            <Link to="/">
+              <img className="logo" src={process.env.PUBLIC_URL + "/img/logo-borg.png"} alt="Logo"/>
+            </Link>
           </div>
           <div className="vertical_line">
           </div>
@@ -29,6 +22,8 @@ export default class AppHeader extends Component {
           </div>
         </div>
       </header>
+    </div>
+  </div>
     );
   }
 }
