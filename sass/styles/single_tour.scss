@@ -1,11 +1,54 @@
 /****************************************
 Hero
 ****************************************/
-.hero {
-  // background: url(../dist/img/Adventure/take_a_walk_on_the_ice_side/photo52banner.jpeg) no-repeat center center;
-  // background-size: cover;
+// .hero {
+//   // background: url(../dist/img/Adventure/take_a_walk_on_the_ice_side/photo52banner.jpeg) no-repeat center center;
+//   // background-size: cover;
+//   // height: 100vh;
+//   // margin-bottom: 3rem;
+// }
+
+.hero_container {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 3rem;
+  // display: block;
+}
+.hero_img {
+  align-content: flex-end;
+
+}
+
+
+div[class$="button_group"] {
+  margin-bottom: 20px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  // justify-content: center;
   // height: 100vh;
-  // margin-bottom: 3rem;
+}
+
+div[class^="btn"][class$="group"] {
+  background: rgba($black, 0.5);
+  margin-bottom: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include fonts(icon);
+}
+
+.btn_img {
+  height: 35px;
+}
+
+img {
+  height: 70px;
 }
 
 .hero_img {
@@ -17,13 +60,25 @@ Hero
 }
 
 .hero_txt {
-
+  align-self: flex-end;
 }
 
 /****************************************
 Main text area
 ****************************************/
+.txt_container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+.tour_detail {
+  background-color: $white;
+  flex-grow: 2;
+}
+.single_tour_txt_title {
 
+  @include fonts(h3);
+}
 
 /****************************************
 Tour detales

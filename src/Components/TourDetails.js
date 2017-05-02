@@ -19,48 +19,47 @@ export default class TourDetails extends Component {
     return (
       <div className="single_tour_container" onClick={() => this.handleClick()}>
         {/*Hero container starts*/}
-        <div className="hero_container">
-          <div className="hero_button_group">
+        <section className="hero_container">
+          <div ref="hero_img" className="hero_img" style={divImageBg}>
 
-            <div className="btn_photo_group">
-              <img
-                className="btn_img"
-                src={process.env.PUBLIC_URL + "/img/Icons/photos.svg"}
-                alt=""
-              />
-              <p className="icon_txt">Photos</p>
+            <div className="hero_button_group">
+              <div className="btn_photo_group">
+                <img
+                  className="btn_img"
+                  src={process.env.PUBLIC_URL + "/img/Icons/photos.svg"}
+                  alt=""
+                />
+                <p className="icon_txt">Photos</p>
+              </div>
+              <div className="btn_video_group">
+                <img
+                  className="btn_img"
+                  src={process.env.PUBLIC_URL + "/img/Icons/video.svg"}
+                  alt=""
+                />
+                <p className="icon_txt">Video</p>
+              </div>
+              <div className="btn_map_group">
+                <img
+                  className="btn_img"
+                  src={process.env.PUBLIC_URL + "/img/Icons/map.svg"}
+                  alt=""
+                />
+                <p className="icon_txt">Map</p>
+              </div>
             </div>
-            <div className="btn_video_group">
-              <img
-                className="btn_img"
-                src={process.env.PUBLIC_URL + "/img/Icons/video.svg"}
-                alt=""
-              />
-              <p className="icon_txt">Video</p>
-            </div>
-            <div className="btn_map_group">
-              <img
-                className="btn_img"
-                src={process.env.PUBLIC_URL + "/img/Icons/map.svg"}
-                alt=""
-              />
-              <p className="icon_txt">Map</p>
-            </div>
-
             <div className="hero_txt">
-              <div className="single_tour_title">
+              <h1 className="single_tour_title">
                 {this.props.data.name}
-              </div>
-              <div className="single_tour_subtitle">
+              </h1>
+              <h2 className="single_tour_subtitle">
                 {this.props.data.introtext}
-              </div>
+              </h2>
             </div>
-
-            <div ref="hero_img" className="hero_img" style={divImageBg} />
-
           </div>
-        </div>
+        </section>
         {/*Hero container finish*/}
+
         <div className="txt_container">
           {/*Tour description starts*/}
           <div className="tour_detail">

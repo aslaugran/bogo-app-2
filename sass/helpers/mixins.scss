@@ -42,4 +42,11 @@
 	font-weight: 200;
 	color: $dark-grey;
 	}
+
+	@if $text == icon {
+		font-family: 'Hind', sans-serif;
+		font-weight: 400;
+		color: $white;
+		font-size: 1.125em;
+	}
 }
