@@ -6,10 +6,11 @@ export default class TourDetails extends Component {
   }
 
   render() {
-    console.log("data er: ", this.props.data.mainphoto);
-    var imgUrl = "http://www.extranet.bogo.is" + this.props.data.mainphoto;
+    console.log("image er: ", this.props.data.mainphoto);
+    const imgUrl = `http://www.extranet.bogo.is/${this.props.data.mainphoto}`;
+    // const imgUrl = "http://www.extranet.bogo.is" + this.props.data.mainphoto;
     console.log("imgUrl er: ", imgUrl);
-    var divImageBg = {
+    const divImageBg = {
       backgroundImage: "url('" + imgUrl + "')"
     };
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Tour from "./Tour";
-import axios from "axios";
+// import axios from "axios";
 
 export default class TourList extends Component {
   constructor(props) {
@@ -12,8 +12,12 @@ export default class TourList extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    const { id } = this.props.data;
+  handleClick(tourid) {
+    const selectedTour = this.props.data.filter(tour => {
+      return tour.tourid === tourid;
+    });
+    console.log(selectedTour);
+    const id = selectedTour[0];
     this.props.onTourSelected(id);
   }
 
@@ -24,8 +28,10 @@ export default class TourList extends Component {
   // }, 200);
 
   render() {
-    const { TourSelected } = this.state;
+    // const { TourSelected } = this.state;
     const results = this.props.data;
+    console.log("data er: ", this.props.data);
+
     let tours = results.map(tour => (
       <div>
         <Tour
@@ -35,7 +41,9 @@ export default class TourList extends Component {
           name={tour.name}
           text={tour.introtext}
           price={tour.priceadult}
-          onTourSelected={id => this.props.onCategorySelected(id)}
+          onTourSelected={() => {
+            this.handleClick(tour.tourid);
+          }}
         />
       </div>
     ));

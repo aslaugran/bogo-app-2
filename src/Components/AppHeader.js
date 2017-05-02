@@ -22,7 +22,7 @@ export default class AppHeader extends Component {
               className="logo"
               src={process.env.PUBLIC_URL + "/img/logo-borg.png"}
               alt=""
-              onHomeSelected={this.handleHomeSelected}
+              // handleHomeSelected={this.handleHomeSelected}
             />
           </div>
           <div className="vertical_line" />

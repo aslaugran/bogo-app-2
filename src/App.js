@@ -4,7 +4,7 @@ import AppHeader from "./Components/AppHeader";
 import CategoryList from "./Components/CategoryList";
 import TourList from "./Components/TourList";
 import TourDetails from "./Components/TourDetails";
-import axios from 'axios';
+import axios from "axios";
 
 import categories from "./json/categories.json";
 
@@ -20,22 +20,22 @@ export default class App extends Component {
 
     this.handleCategorySelected = this.handleCategorySelected.bind(this);
     this.handleTourSelected = this.handleTourSelected.bind(this);
-
   }
 
   componentDidMount() {
     this.setState({
       categories: categories.data
     });
-    axios.get('http://www.extranet.bogo.is/api/tours/58fcc108ecc2cc0282ccad6e')
+    axios
+      .get("http://www.extranet.bogo.is/api/tours/58fcc108ecc2cc0282ccad6e")
       .then(response => {
         this.setState({
           tours: response.data
         });
       })
-    .catch(error => {
-      console.log('Error fetching and parsing data', error);
-    });
+      .catch(error => {
+        console.log("Error fetching and parsing data", error);
+      });
   }
 
   handleHomeSelected(data) {
@@ -58,16 +58,21 @@ export default class App extends Component {
   }
 
   render() {
-    const { categories, selectedCategory, selectedTour , selectedHome} = this.state;
+    const {
+      categories,
+      selectedCategory,
+      selectedTour,
+      selectedHome
+    } = this.state;
     let categoryList;
     let tourList;
     let tours;
 
-
     if (selectedCategory) {
       tourList = (
-        <TourList data={this.state.tours}
-          onTourSelected={id => this.state.handleTourSelected(id)}
+        <TourList
+          data={this.state.tours}
+          onTourSelected={id => this.handleTourSelected(id)}
         />
       );
     } else if (selectedTour) {
@@ -85,7 +90,7 @@ export default class App extends Component {
       <div>
         <div className="main-header">
           <div className="inner">
-            <AppHeader/>
+            <AppHeader />
           </div>
         </div>
         <div className="main-content">
