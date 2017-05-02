@@ -16,7 +16,6 @@ export default class TourDetails extends Component {
     console.log("divImageBg er: ", divImageBg);
 
     return (
-<<<<<<< HEAD
       <div className="single_tour_container" onClick={() => this.handleClick()}>
         {/*Hero container starts*/}
         <div className="hero_container">
@@ -149,13 +148,10 @@ export default class TourDetails extends Component {
             <a href="#">BOOK NOW</a>
           </div>
         </div>
-
+        <li className="" onClick={() => this.handleClick()}>
+          {this.props.data.text}
+        </li>
       </div>
-=======
-      <li className="" onClick={() => this.handleClick()}>
-        {this.props.data.text}
-      </li>
->>>>>>> 1c841173dbde68c4dfc6c46733d7f0244d6b2b8b
     );
   }
 }

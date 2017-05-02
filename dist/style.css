@@ -150,15 +150,10 @@ Cart AREA
 }
 
 .cart_icon {
-<<<<<<< HEAD
   height: 30px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-=======
-  height: 40px;
-  margin: 20px 75px;
->>>>>>> 1c841173dbde68c4dfc6c46733d7f0244d6b2b8b
 }
 
 .categories_title {
@@ -270,58 +265,15 @@ Cart AREA
 /****************************************
 Hero
 ****************************************/
-<<<<<<< HEAD
-.hero_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.hero {
+  background-size: cover;
+  height: 100vh;
+  margin-bottom: 3rem;
 }
 
 .hero_img {
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.hero_button_group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.btn_photo_group,
-.btn_video_group,
-.btn_map_group {
-  background: #CFCFCF;
-  max-width: 50px;
-}
-
-/****************************************
-Text area
-****************************************/
-.txt_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-=======
-.hero {
-  background-size: cover;
-  height: 100vh;
-  margin-bottom: 3rem;
->>>>>>> 1c841173dbde68c4dfc6c46733d7f0244d6b2b8b
 }
 
 /****************************************
