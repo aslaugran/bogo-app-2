@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
 export default class Tour extends Component {
   constructor(props) {
     super(props);
@@ -28,6 +29,27 @@ export default class Tour extends Component {
               <p>{this.props.price} ISK</p>
             </div>
           </div>
+=======
+const Tour = props => (
+  <div className="tourcard" onClick={props.onTourSelected}>
+
+    <div className="image_gradient" />
+    <img
+      className="tourimg"
+      src={"http://extranet.bogo.is" + props.photo}
+      alt=""
+    />
+    <div className="tourdetails">
+      <div className="row">
+        <div className="col-md-12 col-sm-12 col-xs-12">
+          <h3>{props.name}</h3>
+        </div>
+        <div className="col-md-8 col-sm-8 col-xs-8">
+          <p>{props.text}</p>
+        </div>
+        <div className="col-md-4 col-sm-4 col-xs-4">
+          <p>{props.price} ISK</p>
+>>>>>>> 44900a3ae8110a35cdcccf65f81e47180c387dc6
         </div>
       </div>
       </Link>
