@@ -152,8 +152,15 @@ Cart AREA
 }
 
 .cart_icon {
+<<<<<<< HEAD
   height: 40px;
   margin: 20px 50px;
+=======
+  height: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+>>>>>>> 5f8439031c2c9e8585d65aff6438523f18052619
 }
 
 .categories_title {
@@ -207,7 +214,7 @@ Cart AREA
 }
 
 .main-content {
-  background: #5b5b5b;
+  background: #555;
   min-height: 915px;
   overflow: hidden;
 }
@@ -297,15 +304,110 @@ Cart AREA
 /****************************************
 Hero
 ****************************************/
+<<<<<<< HEAD
 .hero {
   background-size: cover;
   height: 100vh;
   margin-bottom: 3rem;
+=======
+.hero_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.hero_img {
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+div[class$="button_group"] {
+  margin-bottom: 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+div[class^="btn"][class$="group"] {
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 5px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.125em;
+}
+
+.btn_img {
+  height: 35px;
+}
+
+img {
+  height: 70px;
+}
+
+.hero_txt {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+>>>>>>> 5f8439031c2c9e8585d65aff6438523f18052619
 }
 
 /****************************************
 Main text area
 ****************************************/
+<<<<<<< HEAD
+=======
+.txt_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100vw;
+}
+
+.tour_detail {
+  background-color: #fff;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.single_tour_txt_title {
+  /* heading text #3 */
+  font-family: 'Hind', sans-serif;
+  font-size: 1.875em;
+  line-height: 1.875em;
+  font-weight: 700;
+  color: #fff;
+}
+
+>>>>>>> 5f8439031c2c9e8585d65aff6438523f18052619
 /****************************************
 Tour detales
 ****************************************/
