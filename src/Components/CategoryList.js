@@ -3,17 +3,6 @@ import Category from "./Category";
 
 const CategoryList = props => {
   const results = props.data;
-<<<<<<< HEAD
-  let categories = results.map(category =>
-      <Category
-        name={category.name}
-        img={category.img}
-        key={category.id}
-        url={category.slug}
-        color={category.color}
-      />
-);
-=======
   let categories = results.map(category => (
     <Category
       name={category.name}
@@ -23,7 +12,6 @@ const CategoryList = props => {
       color={category.color}
     />
   ));
->>>>>>> 5f8439031c2c9e8585d65aff6438523f18052619
 
   return (
     <div className="container-fluid">

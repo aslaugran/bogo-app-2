@@ -152,15 +152,8 @@ Cart AREA
 }
 
 .cart_icon {
-<<<<<<< HEAD
   height: 40px;
   margin: 20px 50px;
-=======
-  height: 30px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
->>>>>>> 5f8439031c2c9e8585d65aff6438523f18052619
 }
 
 .categories_title {
@@ -189,6 +182,7 @@ Cart AREA
   border-radius: 10px;
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
 
 .categorie_single img {
@@ -304,12 +298,6 @@ Cart AREA
 /****************************************
 Hero
 ****************************************/
-<<<<<<< HEAD
-.hero {
-  background-size: cover;
-  height: 100vh;
-  margin-bottom: 3rem;
-=======
 .hero_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -372,14 +360,11 @@ img {
 .hero_txt {
   -ms-flex-item-align: end;
       align-self: flex-end;
->>>>>>> 5f8439031c2c9e8585d65aff6438523f18052619
 }
 
 /****************************************
 Main text area
 ****************************************/
-<<<<<<< HEAD
-=======
 .txt_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -407,7 +392,6 @@ Main text area
   color: #fff;
 }
 
->>>>>>> 5f8439031c2c9e8585d65aff6438523f18052619
 /****************************************
 Tour detales
 ****************************************/

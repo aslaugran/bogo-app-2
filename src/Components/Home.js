@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import CategoryList from "./CategoryList";
-import axios from 'axios';
-
+import axios from "axios";
 
 export default class Home extends Component {
   constructor(props) {
@@ -11,23 +10,24 @@ export default class Home extends Component {
     };
   }
   componentDidMount() {
-    axios.get('http://www.extranet.bogo.is/api/categories')
+    axios
+      .get("http://www.extranet.bogo.is/api/categories")
       .then(response => {
         this.setState({
           categories: response.data
         });
       })
-    .catch(error => {
-      console.log('Error fetching and parsing data', error);
-    });
+      .catch(error => {
+        console.log("Error fetching and parsing data", error);
+      });
   }
-  render () {
+  render() {
     return (
       <div className="main-content">
-      <div>
-          <CategoryList data={this.state.categories}/>
+        <div>
+          <CategoryList data={this.state.categories} />
+        </div>
       </div>
-    </div>
-    )
+    );
   }
 }

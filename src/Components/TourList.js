@@ -1,56 +1,16 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Tour from "./Tour";
-import axios from 'axios';
+import axios from "axios";
 
 export default class TourList extends Component {
-<<<<<<< HEAD
-
-   render() {
-    const results = this.props.data;
-    let tours = results.map(tour =>
-      <div><Tour
-      photo={tour.mainphoto}
-      item={tour}
-      key={tour.tourid}
-      id={tour.tourid}
-      name={tour.name}
-      text={tour.introtext}
-      price={tour.priceadult}/></div>
-    );
-
-
-    var settings = {
-        centerMode: true,
-        centerPadding: '100px',
-        slidesToShow: 1,
-        speed: 500
-      };
-
-  return <div style={this.props.background} className="container-fluid card-swipe">
-    <Slider {...settings}>
-      {tours}
-      </Slider>
-    </div>;
-  }
-=======
-  constructor(props) {
-    super(props);
-    this.state = {
-      tours: []
-    };
-  }
-
   render() {
-    // const results = this.props.data;
-    // console.log("data er: ", this.props.data);
-
-    const { TourSelected } = this.state;
     const results = this.props.data;
     let tours = results.map(tour => (
       <div>
         <Tour
           photo={tour.mainphoto}
+          item={tour}
           key={tour.tourid}
           id={tour.tourid}
           name={tour.name}
@@ -62,15 +22,15 @@ export default class TourList extends Component {
 
     var settings = {
       centerMode: true,
-      centerPadding: "120px",
+      centerPadding: "100px",
       slidesToShow: 1,
-      speed: 200
+      speed: 500
     };
 
     return (
       <div style={this.props.background} className="container-fluid card-swipe">
         <Slider {...settings}>
-          <div>{tours}</div>
+          {tours}
         </Slider>
       </div>
     );
@@ -93,5 +53,4 @@ export default class TourList extends Component {
   //     tours: tours.data
   //   });
   // }, 200);
->>>>>>> 5f8439031c2c9e8585d65aff6438523f18052619
 }
