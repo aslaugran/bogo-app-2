@@ -4,13 +4,9 @@
 }
 
 .main-content {
-<<<<<<< HEAD
-   background: #5b5b5b;
-=======
-  background: #5B5B5B;
->>>>>>> 44900a3ae8110a35cdcccf65f81e47180c387dc6
+  background: $dark-grey;
   min-height: 915px;
-      overflow: hidden;
+  overflow: hidden;
 }
 
 .tourcard {

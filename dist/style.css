@@ -152,15 +152,10 @@ Cart AREA
 }
 
 .cart_icon {
-<<<<<<< HEAD
-  height: 40px;
-  margin: 20px 75px;
-=======
   height: 30px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
->>>>>>> 44900a3ae8110a35cdcccf65f81e47180c387dc6
 }
 
 .categories_title {
@@ -215,7 +210,7 @@ Cart AREA
 }
 
 .main-content {
-  background: #5b5b5b;
+  background: #555;
   min-height: 915px;
   overflow: hidden;
 }
@@ -254,17 +249,17 @@ Cart AREA
   padding: 0px;
 }
 
-.swiper-slide.swiper-slide-active .tourcard {
+.slick-slide.slick-active.slick-center .tourcard {
   height: 800px;
   width: 1075px;
   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
 }
 
-.swiper-slide {
+.slick-slide {
   padding: 60px 0px;
 }
 
-.swiper-slide.swiper-slide-active {
+.slick-slide.slick-active.slick-center {
   padding: 60px 0px;
 }
 
@@ -287,7 +282,6 @@ Cart AREA
   margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
 .tour-card-container {
   width: 970px;
 }
@@ -300,21 +294,6 @@ Cart AREA
   font-size: 1.875em;
   font-family: 'Hind', sans-serif;
   font-weight: lighter;
-  margin-top: 0px;
-}
-
-/****************************************
-Hero
-****************************************/
-.hero {
-  background-size: cover;
-  height: 100vh;
-  margin-bottom: 3rem;
-=======
-.tourdetails p {
-  font-size: 30px;
-  font-family: 'Hind', sans-serif;
-  font-weight: 200;
   margin-top: 0px;
 }
 
@@ -380,13 +359,6 @@ img {
   height: 70px;
 }
 
-.hero_img {
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .hero_txt {
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -420,7 +392,6 @@ Main text area
   line-height: 1.875em;
   font-weight: 700;
   color: #fff;
->>>>>>> 44900a3ae8110a35cdcccf65f81e47180c387dc6
 }
 
 /****************************************
