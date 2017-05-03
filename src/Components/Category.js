@@ -7,7 +7,7 @@ export default class Category extends Component {
   }
 
   handleClick() {
-   console.log('this is:', this.props.color);
+   console.log(this.props.color);
  }
 
 

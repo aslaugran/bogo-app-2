@@ -8,7 +8,7 @@ const CategoryList = props => {
         name={category.name}
         img={category.img}
         key={category.id}
-        url={category.name}
+        url={category.slug}
         color={category.color}
       />
 );

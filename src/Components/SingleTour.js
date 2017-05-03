@@ -1,20 +1,21 @@
 import React, { Component } from "react";
-import CategoryList from "./CategoryList";
+import TourDetails from "./TourDetails";
 import axios from 'axios';
 
-
-export default class Home extends Component {
+export default class SingleTour extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      categories: []
+      tours: [],
     };
   }
   componentDidMount() {
-    axios.get('http://www.extranet.bogo.is/api/categories')
+    let tourId = this.props.match.params.tour;
+    let apiUrl = 'http://www.extranet.bogo.is/api/tours/'+ tourId;
+    axios.get(apiUrl)
       .then(response => {
         this.setState({
-          categories: response.data
+          tour: response.data[0]
         });
       })
     .catch(error => {
@@ -23,11 +24,9 @@ export default class Home extends Component {
   }
   render () {
     return (
-      <div className="main-content">
       <div>
-          <CategoryList data={this.state.categories}/>
+          <TourDetails data={this.state.tour}/>
       </div>
-    </div>
     )
   }
 }
