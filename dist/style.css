@@ -395,6 +395,133 @@ Main text area
 /****************************************
 Tour detales
 ****************************************/
+.booking_frame {
+  background-color: #F3F3F3;
+  width: 495px;
+  height: 883px;
+}
+
+.booking_frame p {
+  /* paragraph text */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: 200;
+  color: #555;
+  margin: 0;
+  position: absolute;
+  background-color: #F3F3F3;
+  padding-right: 30px;
+}
+
+.booking_calendar {
+  padding: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.booking_departure {
+  padding: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  height: 2px;
+  background-color: #8CA3AB;
+}
+
+.booking_frame {
+  background-color: #F3F3F3;
+  width: 495px;
+  height: 883px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.booking_frame p {
+  font-family: 'Hind', sans-serif;
+  font-weight: 200;
+  color: #fff;
+  font-size: 1.75em;
+}
+
+.selected_dates {
+  background-color: #7EA4AF;
+  width: 400px;
+  height: 63px;
+  margin: 45px 45px 0 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.booking_calendar_icon {
+  padding-left: 20px;
+  width: 50px;
+}
+
+.booking_calendar_icon:last-child {
+  margin-left: auto;
+}
+
+.select_passengers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 45px 45px 0 45px;
+}
+
+.types_of_passengers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.passenger_multiplier {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+.multiplier_amount {
+  padding: 10px 35px;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  height: 2px;
+  background-color: #7EA4AF;
+}
+
 .footer_container {
   display: -webkit-box;
   display: -ms-flexbox;
