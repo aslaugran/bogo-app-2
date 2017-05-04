@@ -1,0 +1,14 @@
+.red_circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: $red;
+  display: flex;
+  justify-content: center;
+}
+
+.red_circle p {
+  @include fonts(icon);
+  margin: auto;
+  font-weight: 600;
+}

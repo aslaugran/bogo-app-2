@@ -714,6 +714,99 @@ hr {
   margin: auto;
 }
 
+.booking_frame {
+  background-color: #F3F3F3;
+  width: 495px;
+  height: 883px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cart_dropdown_title_price p {
+  font-family: 'Hind', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  font-size: 1.75em;
+  font-weight: 200;
+  margin: 0;
+  padding-left: 20px;
+  line-height: 35px;
+}
+
+.select_pickup {
+  background-color: #fff;
+  width: 400px;
+  height: 63px;
+  margin: 45px 45px 0 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart_dropdown_wrapper {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cart_dropdown_image {
+  background-image: url("photo52banner.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  width: 110px;
+  height: 110px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart_dropdown_remove {
+  margin: auto;
+}
+
+.red_circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: #FF6363;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.red_circle p {
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.125em;
+  margin: auto;
+  font-weight: 600;
+}
+
 .footer_container {
   display: -webkit-box;
   display: -ms-flexbox;
