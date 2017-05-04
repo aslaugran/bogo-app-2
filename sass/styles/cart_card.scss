@@ -1,0 +1,77 @@
+.incart_card {
+  width: 640px;
+  height: 200px;
+  background-image: url("mynd.jpg"); /* Hér þarf að sækja rétta mynd */
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.incart_card2 {
+  width: 640px;
+  height: 200px;
+  background-image: url("mynd2.jpg"); /* Hér þarf að sækja rétta mynd */
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.cardcart_infotext {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+}
+
+.remove_card {
+  margin-left: auto;
+  padding: 15px;
+}
+
+.incart_card_tripprice {
+  margin-left: auto;
+  margin-top: auto;
+  padding: 0 15px;
+}
+
+.incart_card_tripprice p {
+  @include fonts(cart);
+  margin: 0;
+}
+
+.incart_card_tripname {
+  margin-top: auto;
+  padding: 10px 15px;
+}
+
+.incart_card_tripname p {
+  @include fonts(p);
+
+  font-weight: 700;
+  font-weight: 300;
+  margin: 0;
+}
+
+.incart_empty_card {
+  background-color: $lighter-light-grey;
+  width: 640px;
+  height: 200px;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.empty_card_items {
+  flex-direction: column;
+  display: flex;
+  margin: auto;
+}
+
+.empty_card_plus {
+  margin: auto;
+}
