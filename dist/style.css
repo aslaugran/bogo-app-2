@@ -605,8 +605,6 @@ hr {
 .incart_card {
   width: 640px;
   height: 200px;
-  background-image: url("mynd.jpg");
-  /* Hér þarf að sækja rétta mynd */
   background-position: center;
   border-radius: 20px;
   display: -webkit-box;
@@ -622,7 +620,6 @@ hr {
 .incart_card2 {
   width: 640px;
   height: 200px;
-  background-image: url("mynd2.jpg");
   /* Hér þarf að sækja rétta mynd */
   background-position: center;
   border-radius: 20px;
@@ -767,7 +764,6 @@ hr {
 }
 
 .cart_dropdown_image {
-  background-image: url("photo52banner.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 20px;
@@ -805,6 +801,81 @@ hr {
   font-size: 1.125em;
   margin: auto;
   font-weight: 600;
+}
+
+.booking_frame {
+  background-color: #F3F3F3;
+  width: 495px;
+  height: 883px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h3 {
+  /* heading text #3 */
+  font-family: 'Hind', sans-serif;
+  font-size: 1.875em;
+  line-height: 1.875em;
+  font-weight: 700;
+  color: #fff;
+}
+
+.booking_frame p {
+  font-family: 'Hind', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  font-size: 1.75em;
+  font-weight: 200;
+  color: #555;
+  margin: 0;
+}
+
+.incart_tripinfo {
+  margin: 70px 60px;
+}
+
+.thankyou_card {
+  height: 800px;
+  width: 1245px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.thankyou_remove {
+  margin-left: auto;
+  padding: 30px;
+}
+
+.thankyou_bottom_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: auto;
+}
+
+.thankyou_tripinfo {
+  padding: 30px;
+}
+
+.thankyou_timer {
+  margin-left: auto;
+  margin-top: auto;
+  padding: 30px;
 }
 
 .footer_container {

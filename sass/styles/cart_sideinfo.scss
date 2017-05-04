@@ -1,0 +1,23 @@
+.booking_frame {
+  background-color: $lighter-light-grey;
+  width: 495px;
+  height: 883px;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  @include fonts(h3);
+}
+
+.booking_frame p {
+  @include fonts(cart);
+
+  font-weight: 200;
+  color: $dark-grey;
+  margin: 0;
+}
+
+.incart_tripinfo {
+  margin: 70px 60px;
+}
