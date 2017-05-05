@@ -1,12 +1,7 @@
 import React, { Component } from "react";
 import CategoryList from "./CategoryList";
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-
-=======
+import { Link } from "react-router-dom";
 import axios from "axios";
->>>>>>> 7d7f49f5315503906a3fe3e757e9c1b458630e82
 
 export default class Home extends Component {
   constructor(props) {
@@ -34,40 +29,42 @@ export default class Home extends Component {
           <div className="inner">
             <div className="main-header">
               <div className="inner">
-            <header>
-              <div className="header">
-                <div className="logo_area">
-                  <Link to="/">
-                    <img className="logo" src={process.env.PUBLIC_URL + "/img/logo-borg.png"} alt="Logo"/>
-                  </Link>
-                </div>
-                <div className="vertical_line">
-                </div>
-                <div className="cart_area">
-                  <div className="vertical_line"></div>
-                  <Link to="cart">
-                    <img className="cart_icon" src={process.env.PUBLIC_URL + "/img/cart_icon.svg"} alt="" />
-                  </Link>
-                </div>
+                <header>
+                  <div className="header">
+                    <div className="logo_area">
+                      <Link to="/">
+                        <img
+                          className="logo"
+                          src={process.env.PUBLIC_URL + "/img/logo-borg.png"}
+                          alt="Logo"
+                        />
+                      </Link>
+                    </div>
+                    <div className="vertical_line" />
+                    <div className="cart_area">
+                      <div className="vertical_line" />
+                      <Link to="cart">
+                        <img
+                          className="cart_icon"
+                          src={process.env.PUBLIC_URL + "/img/cart_icon.svg"}
+                          alt=""
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </header>
               </div>
-            </header>
-          </div>
+            </div>
           </div>
         </div>
-        </div>
-      <div>
-      <div className="main-content">
         <div>
-          <CategoryList data={this.state.categories} />
+          <div className="main-content">
+            <div>
+              <CategoryList data={this.state.categories} />
+            </div>
+          </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-  </div>
-</div>
-    )
-=======
     );
->>>>>>> 7d7f49f5315503906a3fe3e757e9c1b458630e82
   }
 }
