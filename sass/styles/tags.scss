@@ -1,0 +1,35 @@
+p.cat_tag_title {
+  font-family: hind;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1pt;
+  line-height: 15px;
+  padding: 0px 15px;
+  text-transform: uppercase;
+}
+
+img.cat_tag_image {
+    padding: 12px;
+}
+
+.tag {
+    margin-left: 50px;
+    float: left;
+    border-radius: 10px;
+    height: 40px;
+}
+
+p img {
+  padding-top: 3pt;
+}
+
+.category_name {
+  float: left;
+}
+
+.tag_close {
+  float: right;
+  height: 40px;
+  width: 40px;
+  border-radius: 0px 10px 10px 0px;
+}

@@ -1,30 +1,51 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Tour from "./Tour";
+import TourVideo from "./TourVideo";
 import axios from 'axios';
 
 export default class TourList extends Component {
-<<<<<<< HEAD
 
    render() {
-    const results = this.props.data;
-    let tours = results.map(tour =>
-      <div><Tour
-      photo={tour.mainphoto}
-      item={tour}
-      key={tour.tourid}
-      id={tour.tourid}
-      name={tour.name}
-      text={tour.introtext}
-      price={tour.priceadult}/></div>
-    );
+     const results = this.props.data;
+     let tours = results.map(function(tour, i) {
+
+       if(tour.mainvideo != "/images/uploads/"){
+         console.log(tour.mainvideo);
+           return <div>
+               <TourVideo
+               video={tour.mainvideo}
+               photo={tour.mainphoto}
+               item={tour}
+               key={tour.tourid}
+               id={tour.tourid}
+               name={tour.name}
+               text={tour.introtext}
+               price={tour.priceadult}/>
+              </div>;
+       }
+       else {
+           return <div>
+           <Tour
+           photo={tour.mainphoto}
+           item={tour}
+           key={tour.tourid}
+           id={tour.tourid}
+           name={tour.name}
+           text={tour.introtext}
+           price={tour.priceadult}/>
+         </div>;
+       }
+
+   }.bind(this));
 
 
+    console.log(tours);
     var settings = {
         centerMode: true,
         centerPadding: '100px',
         slidesToShow: 1,
-        speed: 500
+        speed: 300
       };
 
   return <div style={this.props.background} className="container-fluid card-swipe">
@@ -33,65 +54,4 @@ export default class TourList extends Component {
       </Slider>
     </div>;
   }
-=======
-  constructor(props) {
-    super(props);
-    this.state = {
-      tours: []
-    };
-  }
-
-  render() {
-    // const results = this.props.data;
-    // console.log("data er: ", this.props.data);
-
-    const { TourSelected } = this.state;
-    const results = this.props.data;
-    let tours = results.map(tour => (
-      <div>
-        <Tour
-          photo={tour.mainphoto}
-          key={tour.tourid}
-          id={tour.tourid}
-          name={tour.name}
-          text={tour.introtext}
-          price={tour.priceadult}
-        />
-      </div>
-    ));
-
-    var settings = {
-      centerMode: true,
-      centerPadding: "120px",
-      slidesToShow: 1,
-      speed: 200
-    };
-
-    return (
-      <div style={this.props.background} className="container-fluid card-swipe">
-        <Slider {...settings}>
-          <div>{tours}</div>
-        </Slider>
-      </div>
-    );
-  }
-
-  //   this.handleClick = this.handleClick.bind(this);
-  // }
-  //
-  // handleClick(tourid) {
-  //   const selectedTour = this.props.data.filter(tour => {
-  //     return tour.tourid === tourid;
-  //   });
-  //   console.log(selectedTour);
-  //   const id = selectedTour[0];
-  //   this.props.onTourSelected(id);
-  // }
-
-  // setTimeout(() => {
-  //   this.setState({
-  //     tours: tours.data
-  //   });
-  // }, 200);
->>>>>>> 5f8439031c2c9e8585d65aff6438523f18052619
 }

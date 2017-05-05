@@ -1,20 +1,21 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
-export default class Tour extends Component {
+export default class TourVideo extends Component {
   constructor(props) {
     super(props);
   };
 
   render () {
-    var cardPhoto = "http://www.extranet.bogo.is"+ this.props.photo;
-    var CardBackground = {
-      backgroundImage: "url('"+ cardPhoto +"')"
-    }
+    var cardvideo = "http://extranet.bogo.is/"+ this.props.video;
     var tourLink = "/tour/" + this.props.id;
     return (
       <Link to={tourLink}>
-      <div className="tourcard" style={CardBackground}>
+        <div className="tourcard video-card">
+          <video id="background-video" loop autoPlay>
+            <source src={cardvideo} type="video/mp4"/>
+            <source src={cardvideo} type="video/ogg"/>
+          </video>
         <div className="image_gradient"></div>
         <div className="tourdetails">
           <div className="row tour-card-container">
@@ -29,7 +30,8 @@ export default class Tour extends Component {
             </div>
           </div>
         </div>
-      </div>
+
+    </div>
       </Link>
     )
   }

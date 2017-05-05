@@ -1,85 +1,332 @@
 /****************************************
 Hero
 ****************************************/
-// .hero {
-//   // background: url(../dist/img/Adventure/take_a_walk_on_the_ice_side/photo52banner.jpeg) no-repeat center center;
-//   // background-size: cover;
-//   // height: 100vh;
-//   // margin-bottom: 3rem;
-// }
-
-.hero_container {
-  display: flex;
-  flex-direction: column;
-
-  margin-bottom: 3rem;
-  // display: block;
-}
-.hero_img {
-  align-content: flex-end;
-
+.singe-tour-hero {
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
 }
 
-
-div[class$="button_group"] {
-  margin-bottom: 20px;
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  // justify-content: center;
-  // height: 100vh;
+.single_gradient {
+  height: 800px;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(41, 137, 216, 0.02) 50%, rgba(201, 201, 201, 0) 51%, rgba(229, 229, 229, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#404040', endColorstr='#00e5e5e5',GradientType=0 );
 }
 
-div[class^="btn"][class$="group"] {
-  background: rgba($black, 0.5);
-  margin-bottom: 5px;
-  padding: 20px;
+.tour-intro {
+    position: absolute;
+    bottom: 0;
+    width: 1100px;
+    bottom: 25px;
+    left: 135px;
+}
+
+.tour-intro h1 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.tour-intro p {
+  font-family: 'Hind', sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+  color: #fff;
+  margin: 15px 0px;
+}
+
+.dec p {
+    margin: 0px;
+}
+
+.left-nav {
+    position: fixed;
+    top: 35%;
+    color: #fff;
+    z-index: 99;
+}
+.tour-page {
+  font-family: 'Hind', sans-serif;
+  font-size: 25px;
+  color: #666666;
+  letter-spacing: 0;
+  line-height: 50px;
+  background: #fff;
+}
+
+.tour-sidebar {
+  background: #F3F3F3;
+  padding-top: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 100px;
+}
+
+.tour-sidebar p strong {
+  font-family: 'Hind', sans-serif;
+  font-size: 22px;
+  color: #666666;
+  margin: 0px;
+  letter-spacing: 0;
+
+}
+
+p.tour-title {
+  font-size: 35px;
+  color: #666666;
+  letter-spacing: 0;
+  font-weight: 700;
+  font-family: montserrat;
+  margin: 35px 0px 20px 0px;
+}
+
+.dec {
+  padding: 0px 60px;
+  background: #fff;
+  padding-left: 150px;
+}
+
+.tour-sidebar h2 {
+  font-family: 'Hind', sans-serif;
+  font-size: 30px;
+  color: #666666;
+  letter-spacing: 0;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+img.Duration {
+    padding-left: 15px;
+}
+
+.tour-sidebar p {
+  font-family: 'Hind', sans-serif;
+  font-size: 23px;
+  color: #666666;
+  letter-spacing: 0;
+  font-weight: 100;
+}
+
+p.duration {
+    margin: 0px;
+}
+
+h2.add-info {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h2.supplier {
+    margin: 0px;
+}
+
+p.supplier {
+    margin-top: 0px;
+}
+
+.nav-item {
+    padding: 15px;
+    margin: 5px 0px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 110px;
+}
+
+.nav-item p {
+  margin: 0px;
+}
+
+.booking_footer {
+  position: fixed;
+  width: 1366px;
+  bottom: 0px;
+  z-index: 9999;
+}
+
+.booking_back {
+  background-color: #F3F3F3;
+  height: 95px;
+  width: 110px;
+  float: left;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-
-  @include fonts(icon);
 }
 
-.btn_img {
-  height: 35px;
+.booking_button {
+  background-color: #7DBD6B;
+  height: 95px;
+  width: 33%;
+  float: right;
 }
 
-img {
-  height: 70px;
-}
-
-// .hero_img {
-//   width: 100vw;
-//   height: 100vh;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//
-// }
-
-.hero_txt {
-  align-self: flex-end;
-}
-
-/****************************************
-Main text area
-****************************************/
-.txt_container {
+.booking_button a {
   display: flex;
-  flex-direction: row;
-  width: 100vw;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: 'Hind', sans-serif;
+  font-size: 2.5em;
+  font-weight: 900;
+  color: #FFF;
+  padding: 0px;
 }
-.tour_detail {
-  background-color: $white;
-  flex-grow: 2;
-}
-.single_tour_txt_title {
 
-  @include fonts(h3);
+.booking-sidebar {
+    background: #f3f3f3;
+    width: 450px;
+    height: 883px;
+    position: fixed;
+    left: 1186px;
+    bottom: 0px;
+    padding: 45px;
+    z-index: 999;
 }
 
-/****************************************
-Tour detales
-****************************************/
+.booking-sidebar p {
+  font-family: montserrat;
+  font-size: 30px;
+  font-weight: 400;
+  color: #404040;
+  margin: 0;
+  position: absolute;
+  padding-right: 30px;
+  background-color: #F3F3F3;
+}
+
+hr.sidebar-line {
+  width: 100%;
+  border: 0;
+  height: 2px;
+  background-color: #8CA3AB;
+  display: inline-block;
+  margin: 5px;
+}
+
+
+
+.booking-active-overlay {
+  opacity: 0.5;
+    background: #000;
+    width: 1366px;
+    height: 1024px;
+    position: fixed;
+    top: 0px;
+    left: 270px;
+    z-index: 999;
+}
+
+.react-datepicker {
+    width: 100%;
+    background: transparent;
+    border: none;
+}
+
+.react-datepicker__month-container {
+    width: 100%;
+}
+
+.react-datepicker__day-name, .react-datepicker__day {
+    font-family: 'Hind', sans-serif;
+    color: #000;
+    display: inline-block;
+    width: 50px;
+    line-height: 0px;
+    text-align: center;
+    margin: 0px;
+    font-size: 25px;
+    font-weight: 100;
+    padding: 5px;
+}
+
+.react-datepicker__current-month {
+    font-family: 'Hind', sans-serif;
+    margin-top: 0;
+        color: #404040;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.react-datepicker__header {
+    font-family: 'Hind', sans-serif;
+    text-align: center;
+    background-color: none;
+    border-bottom: none;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    padding-top: 0px;
+    position: relative;
+    background: #f3f3f3;
+    font-weight: lighter;
+}
+
+
+.react-datepicker__day-names {
+    font-family: 'Hind', sans-serif;
+      font-weight: lighter;
+    padding-bottom: 5px;
+}
+
+.react-datepicker__navigation {
+    line-height: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    width: 0;
+    border: 12px solid #f3f3f3;
+    z-index: 1;
+}
+
+.react-datepicker__navigation--previous {
+    border-right-color: #b3b2b2;
+}
+
+.react-datepicker__navigation.react-datepicker__navigation--next {
+  border-left-color: #b3b2b2;
+}
+
+.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range {
+    border-radius: 0;
+    background-color: #7ea4af;
+    color: #fff;
+    padding: 22px 15px;
+}
+
+.react-datepicker__day.react-datepicker__day--disabled {
+    opacity: 0.3;
+}
+
+.departure p {
+    font-size: 25px;
+    font-weight: 100;
+    line-height: 40px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Hind', sans-serif;
+    text-align: center;
+}
+
+.departure:active {
+    background: #7ea4af;
+    height: 40px;
+}
+
+.departure p:active {
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 100;
+    background: transparent;
+    color: #fff;
+    background: transparent;
+}
+
+.departure {
+    margin-left: 20px;
+    width: 90px;
+    text-align: center;
+}
