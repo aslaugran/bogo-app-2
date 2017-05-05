@@ -1,0 +1,30 @@
+.thankyou_card {
+  // /* Hér þarf að sækja rétta mynd */
+  // background-image: url("photo52banner.jpg");
+  height: 800px;
+  width: 1245px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.thankyou_remove {
+  margin-left: auto;
+  padding: 30px;
+}
+
+.thankyou_bottom_container {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+}
+
+.thankyou_tripinfo {
+  padding: 30px;
+}
+
+.thankyou_timer {
+  margin-left: auto;
+  margin-top: auto;
+  padding: 30px;
+}

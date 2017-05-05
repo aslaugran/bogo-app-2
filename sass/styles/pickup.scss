@@ -1,0 +1,60 @@
+.booking_frame {
+  background-color: $lighter-light-grey;
+  width: 495px;
+  height: 883px;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking_frame p {
+
+  @include fonts(booking);
+
+  margin: 0;
+  padding-left: 20px;
+}
+
+.select_pickup {
+  background-color: #FFF;
+  width: 400px;
+  height: 63px;
+  margin: 45px 45px 0 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.booking_calendar_icon {
+  padding-left: 20px;
+  width: 50px;
+}
+
+.booking_calendar_icon:last-child {
+  margin-left: auto;
+}
+
+.select_passengers {
+  display: flex;
+  margin: 45px 45px 0 45px;
+}
+
+.types_of_passengers {
+  display: flex;
+  flex-direction: column;
+}
+
+.passenger_multiplier {
+  display: flex;
+  margin-left: auto;
+}
+
+.multiplier_amount {
+  padding: 10px 35px;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  height: 2px;
+  background-color: $blue-grey;
+}

@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import CategoryList from "./CategoryList";
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+=======
+import axios from "axios";
+>>>>>>> 7d7f49f5315503906a3fe3e757e9c1b458630e82
 
 export default class Home extends Component {
   constructor(props) {
@@ -12,17 +16,18 @@ export default class Home extends Component {
     };
   }
   componentDidMount() {
-    axios.get('http://www.extranet.bogo.is/api/categories')
+    axios
+      .get("http://www.extranet.bogo.is/api/categories")
       .then(response => {
         this.setState({
           categories: response.data
         });
       })
-    .catch(error => {
-      console.log('Error fetching and parsing data', error);
-    });
+      .catch(error => {
+        console.log("Error fetching and parsing data", error);
+      });
   }
-  render () {
+  render() {
     return (
       <div>
         <div className="main-header">
@@ -52,12 +57,17 @@ export default class Home extends Component {
         </div>
       <div>
       <div className="main-content">
-      <div>
-          <CategoryList data={this.state.categories}/>
+        <div>
+          <CategoryList data={this.state.categories} />
+        </div>
       </div>
+<<<<<<< HEAD
     </div>
   </div>
 </div>
     )
+=======
+    );
+>>>>>>> 7d7f49f5315503906a3fe3e757e9c1b458630e82
   }
 }

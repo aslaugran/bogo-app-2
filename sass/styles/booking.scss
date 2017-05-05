@@ -1,0 +1,33 @@
+.booking_frame {
+  background-color: $lighter-light-grey;
+  width: 495px;
+  height: 883px;
+}
+
+.booking_frame p {
+  @include fonts(p);
+
+  margin: 0;
+  position: absolute;
+  background-color: $lighter-light-grey;
+  padding-right: 30px;
+}
+
+.booking_calendar {
+  padding: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.booking_departure {
+  padding: 45px;
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  height: 2px;
+  background-color: #8CA3AB;
+}

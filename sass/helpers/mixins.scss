@@ -42,4 +42,28 @@
 	font-weight: 200;
 	color: $dark-grey;
 	}
+<<<<<<< HEAD
+=======
+
+	@if $text == icon {
+		font-family: 'Hind', sans-serif;
+		font-weight: 400;
+		color: $white;
+		font-size: 1.125em;
+	}
+
+	@if $text == calendar {
+		font-family: 'Hind', sans-serif;
+		font-weight: 200;
+		color: $white;
+		font-size: 1.75em;
+	}
+
+	@if $text == cart {
+		font-family: 'Hind', sans-serif;
+		font-weight: 300;
+		color: $white;
+		font-size: 1.75em;
+	}
+>>>>>>> 7d7f49f5315503906a3fe3e757e9c1b458630e82
 }
